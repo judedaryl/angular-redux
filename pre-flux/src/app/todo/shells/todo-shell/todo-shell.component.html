@@ -1,0 +1,7 @@
+<section class="container my-5">
+    <div class="mb-3">
+        <h3 class="mb-1">Todo app</h3>
+        <span class="text-muted">Number of todo's finished: {{doneCount}}</span>
+    </div>
+    <app-todo-list (todosDone)="doneCount = $event"></app-todo-list>
+</section>

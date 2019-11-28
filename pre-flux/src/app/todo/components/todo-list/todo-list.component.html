@@ -1,0 +1,11 @@
+<div class="input-group mb-3">
+    <input #todoInput type="text" class="form-control" placeholder="Type a task you want todo!" aria-label="Todo name">
+    <div class="input-group-append">
+        <button (click)="addTodo(todoInput.value); todoInput.value = '';" class="btn btn-primary" type="button">Add</button>
+    </div>
+</div>
+<ul class="list-group">
+    <li class="list-group-item" *ngFor="let todo of todos; let i = index;">
+        <app-todo-item [todo]="todo" (remove)="removeTodo(i)" (done)="doneTodo(i, $event)"></app-todo-item>
+    </li>
+</ul>

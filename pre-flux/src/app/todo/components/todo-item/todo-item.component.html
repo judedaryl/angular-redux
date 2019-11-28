@@ -1,0 +1,9 @@
+<div class="d-flex">
+    <div class="custom-control custom-checkbox">
+        <input (change)="done.emit(!todo?.done)" [checked]="todo?.done" type="checkbox" class="custom-control-input" id="item-{{id}}">
+        <label class="custom-control-label" for="item-{{id}}"></label>
+    </div>
+    <span>{{todo?.name}}</span>
+    <span class="flex-fill"></span>
+    <button class="btn btn-sm btn-outline-danger" (click)="remove.next()">Remove</button>
+</div>
